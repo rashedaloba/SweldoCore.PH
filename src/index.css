@@ -1,0 +1,9 @@
+@import "./styles/theme.css";
+@import "./styles/shell.css";
+@import "./styles/dashboard.css";
+@import "./styles/employees.css";
+@import "./styles/attendance.css";
+@import "./styles/payroll.css";
+@import "./styles/documents.css";
+@import "./styles/responsive.css";
+@import "./styles/print.css";

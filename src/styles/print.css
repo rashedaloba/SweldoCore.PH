@@ -1,0 +1,12 @@
+@media print {
+  @page { margin: 16mm; }
+  html, body, #root { min-height: auto; background: white !important; }
+  .app-sidebar, .topbar, .no-print, .page-heading, .page-section > :not(.payslip-printable) { display: none !important; }
+  .app-shell { display: block; min-height: 0; }
+  .app-main { width: 100%; }
+  .page-container { width: 100%; margin: 0; padding: 0; }
+  .page-section { display: block; }
+  .payslip-printable { display: grid !important; gap: 18px; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .payslip-header { grid-template-columns: minmax(0,1fr) auto auto; }
+  .payslip-employee-block, .payslip-net { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}

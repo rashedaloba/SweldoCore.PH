@@ -1,0 +1,61 @@
+.attendance-controls { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; }
+.attendance-date-field, .attendance-status-field { display: grid; gap: 6px; color: #52635c; font-size: .73rem; font-weight: 650; }
+.attendance-date-field input { min-width: 190px; }
+.attendance-controls > p { max-width: 420px; padding-bottom: 4px; color: var(--muted); font-size: .72rem; line-height: 1.5; text-align: right; }
+.attendance-access-note { padding: 11px 13px; border: 1px solid #d5e5fb; border-radius: 8px; background: #eef5ff; color: #24528a; font-size: .74rem; line-height: 1.5; }
+.attendance-summary { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
+.attendance-stat { display: grid; gap: 8px; padding: 17px; }
+.attendance-stat span { color: var(--muted); font-size: .7rem; font-weight: 650; }
+.attendance-stat strong { font-size: 1.45rem; line-height: 1; }
+.attendance-stat.present strong { color: var(--success); }
+.attendance-stat.absent strong { color: var(--danger); }
+.attendance-stat.leave strong { color: #96631a; }
+.attendance-stat.unmarked strong { color: var(--muted); }
+.attendance-register { display: grid; gap: 13px; }
+.attendance-register-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 15px; }
+.attendance-register-heading .eyebrow { margin-bottom: 4px; }
+.attendance-register-heading h2 { font-size: 1rem; }
+.attendance-register-heading > span { color: var(--muted); font-size: .72rem; }
+.attendance-date-caption { margin-top: 4px; color: var(--muted); font-size: .72rem; }
+.attendance-row { display: grid; grid-template-columns: minmax(0,1fr) minmax(180px,250px); align-items: center; gap: 16px; padding: 13px 17px; border: 1px solid var(--line); border-radius: 11px; background: white; }
+.attendance-status-field select { width: 100%; }
+.attendance-hours-editor { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: end; gap: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
+.attendance-hours-editor label { display: grid; gap: 6px; color: #52635c; font-size: .7rem; font-weight: 650; }
+.attendance-hours-hint, .attendance-hours-total, .attendance-hours-error { grid-column: 1 / -1; font-size: .72rem; }
+.attendance-hours-hint { color: var(--muted); }
+.attendance-hours-note { padding: 11px 13px; border-radius: 8px; background: #fff8e8; color: #74510a; font-size: .74rem; line-height: 1.5; }
+.attendance-hours-total { color: #344840; font-weight: 700; }
+.attendance-hours-error { color: var(--danger); }
+.attendance-hours-editor button { justify-self: start; }
+.attendance-monthly-results { display: grid; gap: 14px; }
+.attendance-monthly-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
+.attendance-monthly-heading .eyebrow { margin-bottom: 4px; }
+.attendance-monthly-heading h2 { font-size: 1rem; }
+.attendance-monthly-heading > span { color: var(--muted); font-size: .72rem; white-space: nowrap; }
+.attendance-daily-results { display: grid; gap: 12px; padding-top: 15px; border-top: 1px solid var(--line); }
+.attendance-daily-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.attendance-daily-heading h3 { font-size: .9rem; }
+.attendance-daily-heading span { color: var(--muted); font-size: .72rem; }
+.attendance-no-results { padding: 11px 13px; border-radius: 8px; background: #f5f7f9; color: var(--muted); font-size: .74rem; line-height: 1.5; }
+.attendance-month-table-wrap { overflow-x: auto; }
+.attendance-month-table { width: 100%; min-width: 660px; border-collapse: collapse; text-align: left; }
+.attendance-daily-table { min-width: 720px; }
+.attendance-month-table th, .attendance-month-table td { padding: 11px 12px; border-top: 1px solid var(--line); font-size: .73rem; }
+.attendance-month-table thead th { color: var(--muted); font-size: .65rem; font-weight: 700; text-transform: uppercase; }
+.attendance-month-table tbody th { display: grid; gap: 4px; }
+.attendance-month-table tbody th strong { font-size: .75rem; }
+.attendance-month-table tbody th small { color: var(--muted); font-size: .67rem; font-weight: 400; }
+.attendance-month-table td { color: #344840; font-weight: 650; }
+
+@media (max-width: 680px) {
+  .attendance-controls { align-items: stretch; flex-direction: column; }
+  .attendance-date-field input { width: 100%; }
+  .attendance-controls > p { max-width: none; text-align: left; }
+  .attendance-summary { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+  .attendance-stat { padding: 13px; }
+  .attendance-row { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 13px; }
+  .attendance-status-field select { width: 100%; }
+  .attendance-hours-editor { grid-template-columns: minmax(0,1fr); }
+  .attendance-hours-hint, .attendance-hours-total, .attendance-hours-error { grid-column: auto; }
+  .attendance-hours-editor button { width: 100%; }
+}

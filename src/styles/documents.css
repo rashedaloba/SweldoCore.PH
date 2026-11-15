@@ -1,0 +1,50 @@
+.settings-form { max-width: 850px; gap: 20px; }
+.form-section-heading { padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.form-section-heading p { margin-top: 4px; color: var(--muted); font-size: .75rem; }
+.settings-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.settings-grid .wide { grid-column: 1/-1; }
+.settings-form label, .employee-form label { display: grid; gap: 7px; color: #52635c; font-size: .73rem; font-weight: 650; }
+.settings-form input, .employee-form input { width: 100%; }
+.form-actions { display: flex; align-items: center; justify-content: flex-end; gap: 11px; padding-top: 15px; border-top: 1px solid var(--line); }
+.save-confirmation { margin-right: auto; color: var(--success); font-size: .73rem; font-weight: 700; }
+.danger-zone { display: flex; align-items: center; justify-content: space-between; gap: 18px; border-color: #efcaca; }
+.danger-zone h2 { margin-bottom: 5px; font-size: .9rem; }
+.danger-zone p { color: var(--muted); font-size: .75rem; line-height: 1.5; }
+.danger-zone .danger-button:disabled { cursor: not-allowed; opacity: .55; }
+.employee-picker { display: grid; gap: 5px; color: var(--muted); font-size: .68rem; font-weight: 650; }
+.employee-picker select { min-width: 200px; }
+
+.payslip-printable { display: grid; gap: 24px; padding: 30px; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: var(--shadow); }
+.payslip-header { display: grid; grid-template-columns: minmax(0,1fr) auto auto; align-items: center; gap: 25px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.pdf-download-message { color: var(--success); font-size: .73rem; font-weight: 650; }
+.pdf-download-message[role="alert"] { color: var(--danger); }
+.payslip-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.payslip-brand-mark { display: block; width: 42px; height: 42px; flex: 0 0 42px; border-radius: 11px; }
+.payslip-brand h2 { font-size: .9rem; }
+.payslip-brand p { margin-top: 4px; color: var(--muted); font-size: .69rem; }
+.payslip-heading-meta { display: grid; justify-items: end; gap: 4px; }
+.payslip-heading-meta > strong { margin-top: 4px; color: #52615a; font-size: .65rem; letter-spacing: .09em; }
+.payslip-heading-meta > span:last-child { color: var(--muted); font-size: .72rem; }
+.payslip-employee-block { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 15px; padding: 16px; border: 1px solid #e8eeeb; border-radius: 9px; background: #f9fbfa; }
+.payslip-employee-block > div { display: grid; gap: 5px; }
+.payslip-employee-block span { color: var(--muted); font-size: .66rem; }
+.payslip-employee-block strong { overflow-wrap: anywhere; color: #33443c; font-size: .76rem; }
+.payslip-body { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 25px; }
+.payslip-table { display: grid; align-content: start; }
+.payslip-table .row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid #edf1ef; color: #56645d; font-size: .74rem; }
+.payslip-table .row strong { color: #394942; font-weight: 650; }
+.payslip-table .payslip-table-head { padding: 0 0 10px; border-top: 0; color: #273b32; font-size: .75rem; font-weight: 750; }
+.payslip-table .payslip-subtotal { border-top: 1px solid #dfe8e3; color: #33463d; font-weight: 700; }
+.payslip-table .payslip-subtotal strong { font-weight: 750; }
+.payslip-net { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; border-radius: 10px; background: #eaf4ee; color: #1d553f; }
+.payslip-net span { font-size: .82rem; font-weight: 700; }
+.payslip-net strong { font-size: 1.5rem; letter-spacing: -.04em; }
+.payslip-disclaimer { padding-top: 3px; }
+.payslip-disclaimer strong { color: #5b6b63; font-size: .69rem; }
+.payslip-disclaimer p { margin-top: 5px; color: #7e8c85; font-size: .68rem; line-height: 1.55; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.modal-backdrop { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; padding: 18px; background: rgba(19,39,33,.42); }
+.modal-card { width: min(470px,100%); padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: 0 22px 60px rgba(15,35,28,.2); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+.employee-form { display: grid; gap: 15px; }

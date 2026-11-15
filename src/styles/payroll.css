@@ -1,0 +1,47 @@
+.payroll-heading { align-items: center; }
+.payroll-summary-strip { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); overflow: hidden; border: 1px solid #dce8e2; border-radius: 11px; background: white; }
+.payroll-summary-strip > div { display: grid; gap: 7px; padding: 15px 18px; border-right: 1px solid var(--line); }
+.payroll-summary-strip > div:last-child { border-right: 0; background: #f1f7f3; }
+.payroll-summary-strip span { color: var(--muted); font-size: .69rem; font-weight: 600; }
+.payroll-summary-strip strong { color: #2e4038; font-size: 1rem; letter-spacing: -.025em; }
+.inline-success { padding: 12px 14px; border: 1px solid #cde5d6; border-radius: 9px; background: #edf8f1; color: #216243; font-size: .78rem; }
+.approval-confirmation { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 17px; border: 1px solid #c9dcf9; border-radius: 10px; background: #f1f7ff; color: #1c3761; }
+.approval-confirmation strong { font-size: .82rem; }
+.approval-confirmation p { margin-top: 5px; color: #4b6488; font-size: .72rem; line-height: 1.5; }
+.approval-actions { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; }
+.payroll-table-card { padding: 0; overflow: hidden; }
+.table-title-row { padding: 20px 21px 14px; }
+.table-title-row h2 { font-size: 1.03rem; }
+.table-caption { color: var(--muted-light); font-size: .69rem; }
+.payroll-table-wrap { width: 100%; overflow-x: auto; }
+.payroll-table { width: 100%; border-collapse: collapse; text-align: left; white-space: nowrap; }
+.payroll-table th { padding: 11px 17px; background: #f7f9f8; color: #76857e; font-size: .65rem; font-weight: 700; letter-spacing: .035em; text-transform: uppercase; }
+.payroll-table td { padding: 12px 17px; border-top: 1px solid #edf1ef; color: #44534d; font-size: .75rem; }
+.payroll-table tbody tr { cursor: pointer; transition: background .14s ease; }
+.payroll-table tbody tr:hover { background: #f9fbfa; }
+.payroll-table tbody tr.selected { background: #f0f7f3; }
+.payroll-table td:first-child { min-width: 230px; }
+.payroll-table .net-cell { color: #215c45; font-weight: 750; }
+.table-action { border: 0; background: transparent; color: var(--primary); font-size: .7rem; font-weight: 750; }
+.table-action:hover { text-decoration: underline; }
+.table-footer { display: flex; justify-content: space-between; gap: 12px; padding: 11px 18px; border-top: 1px solid var(--line); color: #8b9791; font-size: .66rem; }
+.payroll-detail-grid { display: grid; grid-template-columns: minmax(220px,.8fr) minmax(300px,1.2fr); gap: 15px; }
+.selected-employee-card { display: flex; flex-direction: column; gap: 18px; }
+.selected-employee-card h2 { margin-top: 1px; }
+.selected-pay-total { display: grid; gap: 6px; padding: 14px 15px; border-radius: 9px; background: #f1f7f3; }
+.selected-pay-total span { color: var(--muted); font-size: .7rem; }
+.selected-pay-total strong { color: #215d46; font-size: 1.45rem; letter-spacing: -.04em; }
+.tax-card { display: grid; gap: 16px; }
+.tax-card .card-header-row { margin: 0; }
+.tax-card .eyebrow { margin-bottom: 4px; }
+.tax-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+.tax-stat { display: flex; flex-direction: column; gap: 6px; padding: 11px 12px; border: 1px solid #e7eeea; border-radius: 9px; background: #fafcfb; }
+.tax-stat span, .tax-summary span { color: var(--muted); font-size: .67rem; }
+.tax-stat strong { color: #31443b; font-size: .92rem; letter-spacing: -.025em; }
+.tax-summary { display: flex; justify-content: space-between; gap: 12px; padding-top: 13px; border-top: 1px solid var(--line); }
+.tax-summary > div { display: grid; gap: 5px; }
+.tax-summary strong { font-size: .9rem; }
+.payroll-disclaimer { padding: 0 2px; }
+.access-card { display: grid; justify-items: start; gap: 12px; max-width: 600px; padding: 30px; }
+.access-icon { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 12px; background: #e9f3ee; color: var(--primary); font-weight: 800; }
+.access-card .eyebrow { margin: 0; }
