@@ -30,28 +30,81 @@ The configured schedules are based on the [SSS 2025 employee contribution table]
 
 ## Verification
 
-```bash
-npm test
-npm run build
-npm audit
-```
+The project was verified on 15 November 2026:
+
+- `npm test` — 19 tests passed.
+- `npm run build` — succeeded. Vite reports an advisory because the PDF-generation bundle exceeds 500 kB.
+
+Run `npm audit` separately to check dependency advisories.
 
 ## Folder and file structure
 
 ```text
-src/
-├── components/       # Navigation, account menu, employee form, tax details, printable statement
-├── constants/        # Compact statutory rate data and contribution bands
-├── context/          # Company, employee, access, and payroll-run state; localStorage persistence
-├── pages/            # Overview, People, Attendance, Payroll, Payslips, and Company settings screens
-├── services/         # Attendance management, payroll calculation, and CSV export logic
-├── styles/           # Theme, shell, screen styles, responsive rules, and print styles
-├── utils/            # Shared Philippine peso and pay-period formatters
-├── App.jsx           # Workspace shell and route definitions
-└── main.jsx          # React entry point
+.
+├── .gitignore
+├── index.html                    # Vite HTML entry point
+├── package.json                  # Scripts and dependencies
+├── package-lock.json
+├── public/
+│   ├── company-logo.png
+│   └── sweldo-logo.svg
+├── README.md
+├── src/
+│   ├── App.jsx                   # Workspace shell and routes
+│   ├── index.css
+│   ├── main.jsx                  # React entry point
+│   ├── components/               # Navigation, attendance, employee, payroll, and payslip UI
+│   │   ├── AccountMenu.jsx
+│   │   ├── AttendanceEmployeeRow.jsx
+│   │   ├── AttendanceMonthlyResults.jsx
+│   │   ├── CompanySwitcher.jsx
+│   │   ├── EmployeeDashboard.jsx
+│   │   ├── EmployeeModal.jsx
+│   │   ├── LiveTaxBreakdown.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── PayrollPeriodSelector.jsx
+│   │   └── PrintablePayslip.jsx
+│   ├── constants/                # Attendance values and Philippine tax rates
+│   │   ├── attendance.js
+│   │   └── phTaxRates.js
+│   ├── context/
+│   │   └── PayrollContext.jsx    # Workspace state and localStorage persistence
+│   ├── pages/                    # Top-level workspace screens
+│   │   ├── Attendance.jsx
+│   │   ├── CompanySettings.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Employees.jsx
+│   │   ├── PayslipView.jsx
+│   │   └── RunPayroll.jsx
+│   ├── services/                 # Business logic and focused tests
+│   │   ├── attendanceManagement.js
+│   │   ├── attendanceManagement.test.js
+│   │   ├── companyManagement.js
+│   │   ├── companyManagement.test.js
+│   │   ├── payrollCalculator.js
+│   │   ├── payrollCalculator.test.js
+│   │   ├── payrollExport.js
+│   │   ├── payrollExport.test.js
+│   │   ├── workspaceStorage.js
+│   │   └── workspaceStorage.test.js
+│   ├── styles/                   # Screen, shell, responsive, and print styles
+│   │   ├── attendance.css
+│   │   ├── dashboard.css
+│   │   ├── documents.css
+│   │   ├── employees.css
+│   │   ├── payroll.css
+│   │   ├── print.css
+│   │   ├── responsive.css
+│   │   ├── shell.css
+│   │   └── theme.css
+│   └── utils/
+│       ├── formatters.js
+│       ├── payrollPeriod.js
+│       └── payrollPeriod.test.js
+└── vite.config.js
 ```
 
-Keep source files focused and below 250 lines. Split new screen behavior into components or services when a file approaches that limit.
+Generated `node_modules/` and `dist/` directories are omitted.
 
 ## Run locally
 
